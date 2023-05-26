@@ -1,0 +1,32 @@
+
+body {
+    color:white ;
+}
+
+.chess-game {
+    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgb(73, 122, 52);
+    width: 800px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    width: 800px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+} 
+
+.white-square {
+    background-color: rgb(222, 222, 197);
+}
+
+.black {
+    object-fit: contain;
+}
+

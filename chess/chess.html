@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootleg Chess</title>
+        <link rel="stylesheet" href="styles/chess.css">
+    </head>
+    <body onclick = "playGame()">
+        <div class="chess-game">
+            <div class="row row1">
+                <div class="square js-square white-square" id="1,1">
+                    <img class="piece black rook" id="b-rook" src="chesspieces/bR.svg" onclick="createPiece(this.id);">
+                </div>
+                <div class="square" id="1,2">
+                    <img class="piece black knight" id="b-horse" src="chesspieces/bN.svg" onclick="createPiece(this.id);">
+                </div>
+                <div class="square white-square" id="1,3">
+                    <img class="piece black bishop" id="b-bishop" src="chesspieces/bB.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="1,4">
+                    <img class="piece black queen" id="b-queen" src="chesspieces/bQ.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="1,5">
+                    <img class="piece black king" id="b-king" src="chesspieces/bK.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="1,6">
+                    <img class="piece black bishop"  id="b-bishop2" src="chesspieces/bB.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="1,7">
+                    <img class="piece black knight" id="b-horse2" src="chesspieces/bN.svg" onclick=" createPiece(this.id)">
+                </div>
+                <div class="square" id="1,8">
+                    <img class="piece black rook" id="b-rook2"src="chesspieces/bR.svg" onclick="createPiece(this.id); ">
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="square js-square" id="2,1">
+                    <img class="piece black pawn" src="chesspieces/bP.svg" id="b-pawn" onclick="createPiece(this.id);">
+                </div>
+                <div class="square white-square" id="2,2">
+                    <img class="piece black pawn" src="chesspieces/bP.svg" id ="b-pawn2" onclick="createPiece(this.id);">
+                </div>
+                <div class="square" id="2,3">
+                    <img class="piece black pawn" id ="b-pawn3" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="2,4">
+                    <img class="piece black pawn" id ="b-pawn4" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="2,5">
+                    <img class="piece black pawn" id ="b-pawn5" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="2,6">
+                    <img class="piece black pawn" id ="b-pawn6" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="2,7">
+                    <img class="piece black pawn" id ="b-pawn7" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="2,8">
+                    <img class="piece black pawn" id ="b-pawn8" src="chesspieces/bP.svg" onclick="createPiece(this.id); ">
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="square white-square" id="3,1"></div>
+                <div class="square" id="3,2"></div>
+                <div class="square white-square" id="3,3"></div>
+                <div class="square" id="3,4"></div>
+                <div class="square white-square" id="3,5"></div>
+                <div class="square" id="3,6"></div>
+                <div class="square white-square" id="3,7"></div>
+                <div class="square" id="3,8"></div>
+            </div>
+            <div class="row row4">
+                <div class="square" id="4,1"></div>
+                <div class="square white-square" id="4,2"></div>
+                <div class="square" id="4,3"></div>
+                <div class="square white-square" id="4,4"></div>
+                <div class="square" id="4,5"></div>
+                <div class="square white-square" id="4,6"></div>
+                <div class="square" id="4,7"></div>
+                <div class="square white-square" id="4,8"></div>
+            </div>
+            <div class="row row5">
+                <div class="square white-square" id="5,1"></div>
+                <div class="square" id="5,2"></div>
+                <div class="square white-square" id="5,3"></div>
+                <div class="square" id="5,4"></div>
+                <div class="square white-square" id="5,5"></div>
+                <div class="square" id="5,6"></div>
+                <div class="square white-square" id="5,7"></div>
+                <div class="square" id="5,8"></div>
+            </div>
+            <div class="row row6">
+                <div class="square" id="6,1"></div>
+                <div class="square white-square" id="6,2"></div>
+                <div class="square" id="6,3"></div>
+                <div class="square white-square" id="6,4"></div>
+                <div class="square" id="6,5"></div>
+                <div class="square white-square" id="6,6"></div>
+                <div class="square" id="6,7"></div>
+                <div class="square white-square" id="6,8"></div>
+            </div>
+            <div class="row row7">
+                <div class="square white-square" id="7,1">
+                    <img class="piece ghost pawn" id="ghost-pawn" src="chesspieces/wP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="7,2">
+                    <img class="piece ghost pawn" id="ghost-pawn2"src="chesspieces/wP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="7,3">
+                    <img class="piece ghost pawn" id="ghost-pawn3" src="chesspieces/wP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="7,4">
+                    <img class="piece ghost pawn " id="ghost-pawn4" src="chesspieces/wP.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="7,5">
+                    <img class="piece ghost pawn" id="ghost-pawn5" src="chesspieces/wP.svg" onclick="createPiece(this.id) ">
+                </div>
+                <div class="square" id="7,6">
+                    <img class="piece ghost pawn" id="ghost-pawn6" src="chesspieces/wP.svg" onclick=" createPiece(this.id)">
+                </div>
+                <div class="square white-square" id="7,7">
+                    <img class="piece ghost pawn" id="ghost-pawn7" src="chesspieces/wP.svg" onclick="createPiece(this.id);">
+                </div>
+                <div class="square" id="7,8">
+                    <img class="piece ghost pawn" id="ghost-pawn8" src="chesspieces/wP.svg" onclick="createPiece(this.id); ">
+                </div>
+            </div>
+            <div class="row row8">
+                <div class="square" id="8,1">
+                    <img class="piece ghost rook" id="ghost-rook" src="chesspieces/wR.svg" onclick="createPiece(this.id); " >
+                </div>
+                <div class="square white-square" id="8,2">
+                    <img class="piece ghost knight" id="ghost-knight" src="chesspieces/wN.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="8,3">
+                    <img class="piece ghost bishop" id ="ghost-bishop" src="chesspieces/wB.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="8,4">
+                    <img class="piece ghost queen" id="ghost-queen" src="chesspieces/wQ.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="8,5">
+                    <img class="piece ghost king" id="ghost-king" src="chesspieces/wK.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="8,6">
+                    <img class="piece ghost bishop" id="ghost-bishop2" src="chesspieces/wB.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square" id="8,7">
+                    <img class="piece ghost knight" id="ghost-knight2" src="chesspieces/wN.svg" onclick="createPiece(this.id); ">
+                </div>
+                <div class="square white-square" id="8,8">
+                    <img class="piece ghost rook" id="ghost-rook2" src="chesspieces/wR.svg" onclick="createPiece(this.id);">
+                </div>
+            </div>
+        </div>
+        <script src="javascript/chess.js"></script>
+    </body>
+</html>
